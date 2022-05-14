@@ -1,0 +1,33 @@
+*{
+  padding:0;
+  margin:0;
+  border:0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:8rem 0;
+}
+.value{
+  margin:2rem 0;
+  font-size:46px;
+  font-weight:bold;
+  color:black;
+}
+
+.btn{
+  text-transform: uppercase;
+  padding:6px 10px;
+  background-color:transparent;
+  border:1px solid;
+  margin-right:12px;
+  border-radius:8px;
+}
+
+.btn:hover{
+  border:1px solid green;
+   box-shadow: 0 0.5em 0.5em -0.4em green;
+   color:green;
+  transform: translateY(-0.25em);
+ }
