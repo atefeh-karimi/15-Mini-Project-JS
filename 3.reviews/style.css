@@ -1,10 +1,23 @@
-.container h1{
+.heading{
   text-align:center;
-  margin:2rem;
-  color:#64c4e3;
+  margin:2rem auto;
+  color:black;
+  width:250px;
+  padding-bottom:12px;
+  position:relative;
+}
+
+.heading::after{
+    content: '';
+    height: 6%;
+    position: absolute;
+    width: 80px;
+    background-color: #64c4e3;
+    bottom: 0;
+    left: 90px;
 }
 .cards__container{
- width: 390px;
+    width: 500px;
     height: auto;
     margin: auto;
     display: flex;
@@ -35,9 +48,23 @@
     left: -6px;
     top: -10px;
 }
+.card__img-quote i{
+  position:absolute;
+  color:white;
+  left:-8px;
+  background-color:#64c4e3;
+  border-radius:50%;
+  padding:9px 8px;
+  font-size:12px;
+}
+
+.comment{
+  height:100px;
+}
 .fa{
   margin:1rem 0;
   font-size:22px;
+  cursor:pointer;
 }
 .fa:hover{
   color:#64c4e3;
