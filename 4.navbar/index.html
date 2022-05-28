@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <title>NavBar</title>
+</head>
+
+<body>
+
+
+  <nav class=" wrapper d-flex  justify-content-between shadow align-items-center  px-2 py-2">
+    <h3>Coding <span class="text-info"> Addict</span></h3>
+    <ul class="nav menu justify-content-center flex-column flex-md-row d-md-flex d-none">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+    <button class="btn d-md-none" onclick="hideMenu()"><i class="fas fa-bars bars"></i></button>
+    <ul class="nav socials d-none d-lg-flex">
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-youtube"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-google-plus-square"></i></a></li>
+    </ul>
+
+  </nav>
+
+  <script>
+    function hideMenu() {
+      let menu = document.querySelector(".menu").classList.toggle('d-none');
+      console.log(menu);
+    }
+  </script>
+</body>
+
+</html>

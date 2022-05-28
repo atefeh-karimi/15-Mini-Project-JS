@@ -1,0 +1,68 @@
+.menu li a {
+  color: black;
+}
+
+.menu li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rebeccapurple;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.menu li a:hover {
+  color: black;
+}
+
+.bars {
+  font-size: 28px;
+  color: #3498db;
+}
+
+.socials li {
+  font-size: 22px;
+}
+
+.socials li i {
+  background-color: transparent;
+  color: black;
+}
+
+.socials li:hover i {
+  color: rebeccapurple;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    position: relative;
+  }
+
+  .menu {
+    text-align: left;
+    width: 100%;
+    background-color: rgba(225, 231, 230, 0.712);
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu li a:hover::after {
+    width: 0;
+  }
+
+  .menu li a {
+    transition: 0.2s;
+  }
+
+  .menu li:hover a {
+    transform: translateX(2px);
+    color: #3498db;
+  }
+}
