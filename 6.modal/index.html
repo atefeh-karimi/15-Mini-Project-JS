@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <title>modal</title>
+</head>
+
+<!-- =========================STYLE========================== -->
+<style>
+  * {
+    margin: 0;
+  }
+
+  .container {
+    position: relative;
+    background-image: url('./modern-swedish-architecture-5-1056775.jpg');
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .container__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .container__banner-content {
+    background-color: azure;
+    text-align: center;
+    padding: 3rem 5rem;
+    border-radius: 8px;
+  }
+
+  .container__banner-content h1 {
+    padding-bottom: 16px;
+  }
+
+  .container__banner-content .btn {
+    padding: 8px 12px;
+    background-color: tomato;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    transition: 0.2s;
+    border-radius: 8px;
+  }
+
+  .container__banner-content .btn:hover {
+    background-color: white;
+    color: tomato;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+    height: 100vh;
+    width: 100%;
+  }
+
+  .show-modal {
+    z-index: 10;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    padding: 3rem 5rem;
+    border-radius: 8px;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.678);
+    font-size: 22px;
+  }
+
+  .btn-close:hover {
+    color: red;
+  }
+</style>
+<!-- =========================END OF STYLE========================== -->
+
+<body>
+
+  <!-- =========container========= -->
+  <div class="container">
+    <div class="container__banner">
+      <div class="container__banner-content">
+        <h1>Modal Project</h1>
+        <button class="btn">OPEN MODAL</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========modal========= -->
+  <div class="modal-overlay ">
+    <div class="modal-content">
+      <button class="btn-close">
+        <i class="fa fa-times"></i>
+      </button>
+      <h1>MODAL CONTENT</h1>
+    </div>
+  </div>
+
+  <!-- =========================JS========================== -->
+  <script>
+    const btn = document.querySelector('.btn');
+    const closeBtn = document.querySelector('.btn-close');
+    const modal = document.querySelector('.modal-overlay');
+    btn.addEventListener('click', () => {
+      modal.classList.add('show-modal');
+    })
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('show-modal');
+    })
+  </script>
+  <!-- =========================END OF JS========================== -->
+
+</body>
+
+</html>
